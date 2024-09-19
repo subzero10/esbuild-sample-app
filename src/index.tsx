@@ -6,6 +6,7 @@ import "./index.css";
 import { Honeybadger, HoneybadgerErrorBoundary } from '@honeybadger-io/react'
 
 const config = {
+  endpoint: 'https://eu-api.honeybadger.io',
   apiKey: process.env.HONEYBADGER_API_KEY,
   assetsUrl: process.env.HONEYBADGER_ASSETS_URL,
   revision: process.env.HONEYBADGER_REVISION,
