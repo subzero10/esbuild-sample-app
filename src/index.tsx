@@ -32,7 +32,7 @@ const mount = () => {
   );
 };
 
-const onLoad = (callback: () => void) => {
+const onLoad = (callback) => {
   window.addEventListener("load", callback, { once: true });
 };
 

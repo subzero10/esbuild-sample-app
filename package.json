@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Sample TypeScript React App app using esbuild",
   "scripts": {
-    "build": "esbuild src/app.tsx --bundle --outfile=dist/index.js"
+    "build": "node esbuild.config.js"
   },
   "author": "",
   "license": "ISC",
