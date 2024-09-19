@@ -7,16 +7,18 @@ const { honeybadgerSourceMapPlugin } = require('@honeybadger-io/esbuild-plugin')
 //     assetsUrl: 'https://yoursite.foo',
 //     revision: 'v1.0.0',
 // }
+
 const hbPluginOptions = {
     endpoint: 'https://eu-api.honeybadger.io/v1/source_maps',
     deployEndpoint: 'https://eu-api.honeybadger.io/v1/deploys',
     apiKey: process.env.HONEYBADGER_API_KEY || 'hbp_vgaqc8oVYwbVep79LFrcenDIVp3g763RbHXN',
-    assetsUrl: process.env.HONEYBADGER_ASSETS_URL || 'https://yoursite.foo',
-    revision: process.env.HONEYBADGER_REVISION,
-    environment: process.env.VERCEL_ENV || process.env.NODE_ENV,
-    debug: true,
+    assetsUrl: process.env.HONEYBADGER_ASSETS_URL || 'https://esbuild-sample-app.vercel.app',
+    revision: process.env.HONEYBADGER_REVISION || 'v1.0.0',
+    environment: process.env.VERCEL_ENV || process.env.NODE_ENV || 'production',
     silent: false,
 }
+
+console.log(hbPluginOptions);
 
 esbuild
     .build({
